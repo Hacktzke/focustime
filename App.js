@@ -13,6 +13,8 @@ import { Focus } from './src/features/Focus';
 import { Timer } from './src/features/Timer';
 import { FocusHistory } from './src/features/FocusHistory';
 
+// TEST
+
 export default function App() {
   const [currentSubject, setCurrentSubject] = useState();
   const [history, setHistory] = useState([]);
@@ -27,7 +29,9 @@ export default function App() {
       ) : (
         <Timer
           focusSubject={currentSubject}
-          onTimerEnd={(subject) => {setHistory([...history, subject])}}
+          onTimerEnd={(subject) => {
+            setHistory([...history, subject]);
+          }}
           clearSubject={() => {
             setCurrentSubject(null);
           }}
